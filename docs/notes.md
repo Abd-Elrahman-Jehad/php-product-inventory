@@ -1,0 +1,3 @@
+The biggest Docker problem: "I initially struggled with the Dockerfile extension being saved as .txt, which prevented Docker from recognizing it. I solved this by using VS Code to properly rename the file and remove the hidden extension".
+
+The most important Git lesson: "I learned how to organize a professional repository structure by separating the source code into a src/ folder and using .dockerignore to keep the image clean".
