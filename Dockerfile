@@ -1,12 +1,12 @@
-# استخدام صورة PHP مع Apache [cite: 50, 54]
+# استخدام صورة PHP مع Apache 
 FROM php:8.2-apache
 
-# تحديد مجلد العمل داخل الحاوية [cite: 51]
+# تحديد مجلد العمل داخل الحاوية 
 WORKDIR /var/www/html
 
-# نسخ الكود من مجلد src (تأكد أن ملف index.php داخل مجلد اسمه src) [cite: 52]
+# نسخ الكود من مجلد src 
 COPY src/ .
 
-# فتح المنفذ 80 [cite: 62]
+# فتح المنفذ 80 
 EXPOSE 80
 
