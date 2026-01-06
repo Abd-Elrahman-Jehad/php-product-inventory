@@ -1,6 +1,6 @@
-## Docker & GitHub Basics 
+## Docker & GitHub Basics
 
-### Project Name(PHP Product Inventory)
+### Project Name (PHP Product Inventory)
 
 ---
 
@@ -20,27 +20,68 @@ The project was dockerized as required in **OS Lab – Assignment #2 (Docker & G
 
 ---
 
-## How to Run the Project Without Docker
-1. Download the project files.
-2. Place them inside a local PHP server (such as XAMPP or WAMP).
-3. Start Apache.
-4. Open the project in the browser.
+## Verification of Git & Docker Installation
 
----
+Before starting the deployment process, Git and Docker were verified to be installed correctly using the following commands:
 
-## How to Run the Project Using Docker
+```bash
+git --version
+docker --version
 
-### Step 1: Build the Docker Image
+```
+
+## Repository Cloning
+
+The project repository was cloned from GitHub using the following commands:
+
+```bash
+git clone https://github.com/Abd-Elrahman-Jehad/php-product-inventory.git
+cd php-product-inventory
+
+```
+## Docker Build Process
+
+After cloning the repository, the Docker image was built successfully using the Dockerfile included in the project:
+
 ```bash
 docker build -t php-product-inventory .
-Step 2: Run the Docker Container
-docker run -p 8080:80 php-product-inventory
-Step 3: Open the Project in Browser
+```
+
+## Running the Docker Container
+
+The Docker container was started using the following command:
+```bash
+docker run -d -p 8080:80 php-product-inventory
+```
+
+## Production URL
+
+When running the project locally, it can be accessed using:
+```bash
 http://localhost:8080
-Docker Explanation
+```
+When running the project on GitHub Codespaces, the application is accessed using the forwarded port URL generated automatically by Codespaces, for example:
+```bash
+https://humble-space-meme-q7grxv6vxq6j297r-8080.app.github.dev
+```
+## VPS Deployment Instructions
 
-The project uses an official PHP image with Apache.
+To deploy this project on a Virtual Private Server (VPS), follow these steps:
 
-The Dockerfile copies the project files into the Apache web directory.
+Install Git and Docker on the VPS.
 
-The container runs the project on port 80 and is mapped to port 8080 on the host machine.
+Clone the project repository from GitHub.
+
+Build the Docker image using the Dockerfile.
+
+Run the Docker container and expose the required port.
+
+Access the project using the VPS IP address and port number.
+
+Example commands on a VPS:
+```bash
+git clone https://github.com/Abd-Elrahman-Jehad/php-product-inventory.git
+cd php-product-inventory
+docker build -t php-product-inventory .
+docker run -d -p 8080:80 php-product-inventory
+```
